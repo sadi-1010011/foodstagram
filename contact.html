@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="loading.css">
+	<!-- dependencies -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+	<title>foodstagram - contact</title>
+	<style type="text/css">
+
+/* !IMPORTANT STYLES */
+
+body { 
+	background-color: black; /* #3b4b5ccc */
+	/*overflow: hidden; fixed layout */
+}
+
+::-webkit-scrollbar { display: none; }
+
+.contact-wrapper {
+	position: relative;
+	display: flex;
+	width: 100%;
+	padding-bottom: 8rem;
+	/*height: 90%; fixed layout */
+	background-color: #485461;
+	background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+}
+
+.info-bubble {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 10rem;
+	height: 10rem;
+	text-align: center;
+	word-break: break-all;
+	white-space: initial;
+	border-radius: 50%;
+	padding: 1rem 5px;
+	margin: 0.6rem;
+	color: grey;
+	background-color: #3b4e5cc;
+	box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+	transition: 0.4s;
+	z-index: 99;
+}
+
+.info-bubble:hover {
+	transform: scale(1.2);
+	color: white;
+}
+
+
+.contact-icon-wrapper {
+	display: inline-block;
+	width: 3rem;
+}
+
+.contact-icon-wrapper > img {
+	width: 100%;
+	height: auto;
+}
+
+.contact-card {
+	width: 60%;
+	margin: -1.5rem auto 0 auto;
+	text-align: center;
+	border-radius: 20px;
+	padding: 3rem 12px 1rem 12px;
+	background-color: #334647e8;
+	z-index: 1;
+}
+
+.contact-title {
+	text-transform: capitalize;
+	color: black;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+
+.contact-input {
+	display: block;
+	margin: 10px auto;
+	width: 70%;
+	font-size: 1.12rem;
+	font-weight: 500;
+	padding: 4px 10px;
+	border-radius: 8px 20px;
+	color: white;
+	background-color: transparent;
+}
+
+
+@media screen and (max-width: 768px) {
+	.contact-card {
+		width: 80%;
+	}
+	.info-bubble {
+		width: 8rem;
+		height: 8rem;
+		margin: 0.4rem;
+	}
+	.contact-input {
+		width: 80%;
+	}
+}
+
+
+	</style>
+</head>
+<body>
+
+<!-- LOADING -->
+
+<div id="page_loader">
+	<span>loading</span>
+</div>
+
+
+<!-- HEADER -->
+
+<header class="header-gradient">
+	<div class="row p-3 text-center">
+		<div class="col-lg-3 col-md-6 col-sm-6">
+			<h2 class="navbar-brand"><a class="brand-title" href="#">foodstagram</a></h2>
+		</div>
+
+		<div class="col-lg-6 col-md-6 col-sm-6">
+			<nav class="navbar navbar-expand-lg navbar-dark justify-content-center">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				    	<span class="navbar-toggler-icon"></span>
+					</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav m-auto">
+					  <li class="nav-item">
+					    <a class="nav-link" href="index.html">Home</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href="products.html">products</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href="about.html">about <span class="sr-only">(current)</span></a>
+					  </li>
+					  <li class="nav-item active">
+					    <a class="nav-link" href="contact.html">contact</a>
+					  </li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<div class="col-3 d-none d-lg-block">
+			<div class="basket-wrapper">
+				<div class="daynight-btn" onClick="darklightToggle();">
+					<img src="img/lightbulb.svg" alt="cart">
+				</div>
+<!-- 				<div class="basket-btn">
+					<img src="img/basket.png" alt="cart">
+					<div class="basket-count">
+						<span>0</span>
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</header>
+
+<main class="contact-wrapper">
+	<div class="container">
+		<div class="row justify-content-center pt-5">
+			<div class="info-bubble">
+				<span class="contact-icon-wrapper">
+					<img src="img/location.png" alt="location">
+				</span>
+				<p>address here,<br> earth</p>
+			</div>
+			<div class="info-bubble">
+				<span class="contact-icon-wrapper">
+					<img src="img/phone.png" alt="phone">
+				</span>
+				<p>+91<br>8593022512</p>
+			</div>
+			<div class="info-bubble">
+				<span class="contact-icon-wrapper">
+					<img src="img/mail.png" alt="mail">
+				</span>
+				<p>sadi1010011@gmail.com</p>
+			</div>
+			<div class="info-bubble">
+				<span class="contact-icon-wrapper">
+					<img src="img/fax.png" alt="fax">
+				</span>
+				<p>6238998062</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="contact-card">
+					<form action="" name="">
+						<h3 class="contact-title">contact us</h3>
+						<input class="contact-input" type="text" placeholder="enter your name..">
+						<input class="contact-input" type="text" placeholder="enter valid Email address..">
+						<textarea class="contact-input" rows="4"></textarea>
+						<button class="btn btn-secondary m-2">submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+<footer class="footer-wrapper">
+	<div class="container">
+		<div class="row text-white p-3">
+			<div class="col-9">
+				<span>copyright &copy2022</span>
+			</div>
+			<div class="col-3 text-center">
+				<span class="socialmedia-icon">
+					<img src="img/facebook.png" alt="@fb">
+				</span>
+				<span class="socialmedia-icon">
+					<img src="img/instagram.png" alt="@insta">
+				</span>
+			</div>
+
+		</div>
+	</div>
+</footer>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+</body>
+</html>
